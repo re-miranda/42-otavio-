@@ -1,5 +1,5 @@
-NAME=../linked_list.a
-SRCS=linked_list.c
+NAME=../log.a
+SRCS=log.c
 OBJS=$(SRCS:.c=.o)
 CC=cc
 CFLAGS= -O3 -Werror -Wall -Wextra

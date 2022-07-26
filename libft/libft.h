@@ -6,13 +6,14 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:57:29 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/23 22:34:05 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/26 06:02:55 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "../main.h"
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -50,5 +51,7 @@ char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putendl_fd(char *s, int fd);
+void	ft_free(void *ptr);
+void	*ft_malloc(size_t size);
 
 #endif

@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   linked_list.h                                      :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 14:54:11 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/26 06:15:22 by oburato          ###   ########.fr       */
+/*   Created: 2022/07/26 06:00:47 by oburato           #+#    #+#             */
+/*   Updated: 2022/07/26 06:04:36 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LINKED_LIST_H
-# define LINKED_LIST_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include "../main.h"
-
-typedef struct s_buf	{
-	struct s_buf *next;
-	struct s_buf *back;
-	char *buf_str;
-	void *ptr
-}	t_buf;
-
-#endif
+void	*ft_malloc(size_t size)
+{
+	void	*ptr;
+	ptr = malloc(size);
+	if (!ptr)
+		ptr = NULL;
+	return (ptr);
+}

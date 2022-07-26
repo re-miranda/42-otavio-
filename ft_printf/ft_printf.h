@@ -6,15 +6,14 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:59:56 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/26 01:21:32 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/26 04:07:28 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../libft/libft.h"
-# include "../get_next_line/get_next_line.h"
+# include "../main.h"
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>

@@ -16,7 +16,7 @@ $(ARCH):
 	make -C ./libft
 
 $(NAME): $(LIB)
-	$(CC) $(SRCS) $(LIB) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRCS) $(LIB) -o $(NAME)
 
 clean:
 	rm -rf $(ARCH)

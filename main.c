@@ -1,7 +1,9 @@
 #include "main.h"
 
-int main(int argc, char *argv[])
+// int main(int argc, char *argv[])
+int main(void)
 {
-	ft_printf("%s", ft_strdup("OI"));
+	while (true)
+		ft_printf("%s", get_next_line(0));
 	return (0);
 }
