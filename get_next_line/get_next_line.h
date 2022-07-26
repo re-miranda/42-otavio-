@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:54:11 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/24 20:35:25 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/26 06:19:25 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "../libft/libft.h"
+
+# include "../main.h"
 
 typedef struct s_struct {
 	char	*line;
@@ -30,6 +31,5 @@ char	*get_next_line(int fd);
 char	*ft_get_line(t_struct *var);
 void	ft_read_bytes(t_struct *var);
 void	ft_get_buffer(t_struct *var);
-size_t	ft_strlen(const char *s);
 
 #endif
