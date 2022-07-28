@@ -2,33 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "make printf",
+            "label": "make",
             "command": "make",
-            "args": [
-                "test"
-            ],
+            "args": [],
             "options": {
-                "cwd": "${workspaceFolder}/ft_printf"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": {
                 "owner": "gcc",
-                "fileLocation": [ "relative", "${workspaceFolder}/ft_printf"],
+                "fileLocation": [ "relative", "${workspaceFolder}"],
                 "pattern": {
                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$"
                 }
             },
             "group": "build"
-        },
-        {
-            "label": "valgrind printf",
-            "command": "make",
-            "args": [
-                "valgrind"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/ft_printf"
-            },
-            "group": "test"
         }
     ]
 }

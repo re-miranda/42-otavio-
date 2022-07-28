@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:57:29 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/26 06:02:55 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 04:32:08 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,66 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/**
+ * @file ft_isdigit.c
+ * @author oburato
+ * @date 2022/04/10 13:52:20
+ * @brief The function returns if the character is a digit
+ * @param c representation of a character using the integer type
+ * @return If the character is a digit it returns 1, otherwise it returns 0
+ */
 int		ft_isdigit(int c);
+
+/**
+ * @file ft_isalpha.c
+ * @author oburato
+ * @date 2022/04/10 13:35:06
+ * @brief The function returns if the character is a alpha
+ * @param c representation of a character using the integer type
+ * @return If the character is a alpha it returns 1, otherwise it returns 0
+ */
 int		ft_isalpha(int c);
+
+/**
+ * @file ft_isalnum.c
+ * @author oburato
+ * @date 2022/04/10 13:55:51
+ * @brief The function returns if the character is a number
+ * @param c representation of a character using the integer type
+ * @return If the character is a number it returns 1, otherwise it returns 0
+ */
 int		ft_isalnum(int c);
+
+/**
+ * @file ft_isascii.c
+ * @author oburato
+ * @date 2022/04/10 14:37:31
+ * @brief The function returns if the character is a valid ascii
+ * @param c representation of a character using the integer type
+ * @return If the character is between 0 and 127 it returns 1, otherwise it returns 0
+ */
 int		ft_isascii(int c);
+
+/**
+ * @file ft_isprint.c
+ * @author oburato
+ * @date 2022/04/10 14:50:56
+ * @brief The function returns if the character is a printable ascii
+ * @param c representation of a character using the integer type
+ * @return If the character is between 31 and 127 it returns 1, otherwise it returns 0
+ */
 int		ft_isprint(int c);
+
+/**
+ * @file ft_strlen.c
+ * @author oburato
+ * @date 2022/04/10 15:12:22
+ * @brief The function returns the length of a valid string
+ * @param s representation of a string necessarily terminated with \0
+ * @return the length of a string in size_t
+ */
 size_t	ft_strlen(const char *s);
+
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

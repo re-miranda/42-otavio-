@@ -2,7 +2,7 @@ NAME=../get_next_line.a
 SRCS=get_next_line.c
 OBJS=$(SRCS:.c=.o)
 CC=cc
-CFLAGS= -O3 -Werror -Wall -Wextra
+CFLAGS= -O3 -Werror -Wall -Wextra -g3
 
 all: $(NAME)
 

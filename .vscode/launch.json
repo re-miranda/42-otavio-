@@ -2,20 +2,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "printf",
+            "name": "main",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/ft_printf/main",
+            "program": "${workspaceRoot}/main.out",
             "args": [
                 "test"
             ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceRoot}/ft_printf",
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "make printf",
-            "postDebugTask": "valgrind printf",
+            "preLaunchTask": "make",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

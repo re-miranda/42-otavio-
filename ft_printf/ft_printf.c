@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 01:26:47 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/26 00:52:48 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 02:44:11 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (str[index])
 	{
-		if (str[index] == '%' && ft_printf_strchr("cspdiuxX%", str[index + 1]))
+		if (str[index] == '%')
 		{
 			lenght += ft_check_flag(str[index + 1], args);
 			index++;

@@ -2,7 +2,7 @@ NAME=../linked_list.a
 SRCS=linked_list.c
 OBJS=$(SRCS:.c=.o)
 CC=cc
-CFLAGS= -O3 -Werror -Wall -Wextra
+CFLAGS= -O3 -Werror -Wall -Wextra -g3
 
 all: $(NAME)
 

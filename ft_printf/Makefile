@@ -1,8 +1,8 @@
 NAME=../libftprintf.a
-SRCS=ft_printf.c ft_print.c ft_hexa.c ft_itoa.c ft_printf_strchr.c
+SRCS=ft_printf.c ft_print.c ft_hexa.c ft_itoa.c
 OBJS=$(SRCS:.c=.o)
 CC=cc
-CFLAGS= -O3 -Werror -Wall -Wextra
+CFLAGS= -O3 -Werror -Wall -Wextra -g3
 
 all: $(NAME)
 

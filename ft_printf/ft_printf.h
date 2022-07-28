@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:59:56 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/26 04:07:28 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 02:44:34 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int		ft_printf(const char *str, ...);
 int		ft_check_flag(const char flag, va_list args);
 int		ft_print_string(char *str);
 int		ft_print_number(int number);
-char	*ft_printf_strchr(const char *s, int c);
 
 #endif
