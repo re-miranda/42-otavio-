@@ -1,5 +1,5 @@
 NAME=../libftprintf.a
-SRCS=ft_printf.c ft_print.c ft_hexa.c ft_itoa.c
+SRCS=ft_printf.c ft_print.c ft_hexa.c
 OBJS=$(SRCS:.c=.o)
 CC=cc
 CFLAGS= -O3 -Werror -Wall -Wextra -g3

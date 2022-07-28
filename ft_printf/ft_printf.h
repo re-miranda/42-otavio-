@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:59:56 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/28 02:44:34 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 04:42:54 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-char	*ft_itoa(int n);
-char	*ft_unsigned_itoa(unsigned int n);
 int		ft_print_hexa(size_t number, const char *base);
 int		ft_print_pointer(size_t pointer);
 int		ft_print_unsigned_number(unsigned int number);

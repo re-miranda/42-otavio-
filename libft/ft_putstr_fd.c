@@ -6,14 +6,15 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:22:53 by oburato           #+#    #+#             */
-/*   Updated: 2022/05/07 16:24:13 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 04:45:51 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_putstr_fd(char *s, int fd)
 {
 	if (s)
-		write(fd, s, ft_strlen(s));
+		return write(fd, s, ft_strlen(s));
+	return (0);
 }

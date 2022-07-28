@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:46:27 by oburato           #+#    #+#             */
-/*   Updated: 2022/07/23 19:46:41 by oburato          ###   ########.fr       */
+/*   Updated: 2022/07/28 04:46:37 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,7 @@ int	ft_print_string(char *str)
 		lenght += write(1, "(null)", 6);
 		return (lenght);
 	}
-	while (*str != '\0')
-	{
-		lenght += write(1, *&str, 1);
-		str++;
-	}
+	lenght = ft_putstr_fd(str, 1);
 	return (lenght);
 }
 
