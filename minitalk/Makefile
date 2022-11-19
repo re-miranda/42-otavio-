@@ -7,6 +7,8 @@ S_OBJS=$(S_SRCS:.c=.o)
 C_SRCS=client.c libput.c libnum.c ft_atoi.c
 C_OBJS=$(C_SRCS:.c=.o)
 
+HEADER=minitalk.h
+
 CC=cc
 CFLAGS= -Werror -Wall -Wextra -g3 -O3
 
@@ -18,7 +20,7 @@ $(SERVER): $(S_OBJS)
 $(CLIENT): $(C_OBJS)
 	$(CC) $(C_OBJS) $(CFLAGS) $(LINK) -o $(CLIENT)
 
-%.o: %.c
+%.o: %.c $(HEADER)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
