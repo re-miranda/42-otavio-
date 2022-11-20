@@ -21,7 +21,7 @@ void ft_handler(int signal)
 	if (signal == SIGUSR2)
 		c |= 0b00000001;
 	else if (signal == SIGUSR1)
-		c ^= 0b00000001;
+		c &= ~0b00000001;
 	if (++bits == 8)
 	{
 		write(1, &c, 1);

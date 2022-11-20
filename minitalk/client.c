@@ -19,12 +19,12 @@ void	ft_send_char(unsigned int str_index, char *c)
 	int bit;
 
 	bit = 0;
-	while (bit <= 8)
+	while (bit < 8)
 	{
-		if (*c & 0b10000000 >> bit)
-			kill(pid, SIGUSR1);
-		else
+		if (*c & (0b10000000 >> bit))
 			kill(pid, SIGUSR2);
+		else
+			kill(pid, SIGUSR1);
 		bit++;
 		usleep(800);
 	}
