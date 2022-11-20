@@ -11,26 +11,22 @@
 /* ************************************************************************** */
 
 #include "minitalk.h"
-#include <stdio.h>
 
-void ft_handler(int signal)
+void ft_handler(int signal, siginfo_t *info, void *context)
 {
 	static char	c = 0b11111111;
 	static int	bits = 0;
-	static char	*msg = 0;
 
+	(void)info;
+	(void)context;
+	kill(info->si_pid, SIGUSR1);
 	if (signal == SIGUSR1)
 		c |= 0b10000000 >> bits;
 	else if (signal == SIGUSR2)
 		c ^= 0b10000000 >> bits;
-	if (++bits == 8)
+	if (++bits == 9)
 	{
-		if (c)
-			msg = ft_straddc(msg, c);
-		else
-		{
-			write(1, msg, ft_strlen(msg));
-		}
+		write(1, &c, 1);
 		bits = 0;
 		c = 0b11111111;
 	}
@@ -44,7 +40,7 @@ int main(void)
 	sigemptyset(&sa_mask);
 	act.sa_flags = SA_SIGINFO;
 	act.sa_mask = sa_mask;
-	act.sa_handler = ft_handler;
+	act.sa_sigaction = ft_handler;
 	ft_putstr_fd("PID: ", 1);
 	ft_putnbr_fd(getpid(), 1);
 	ft_putstr_fd("\n", 1);
