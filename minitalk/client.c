@@ -12,40 +12,33 @@
 
 #include "minitalk.h"
 
-void ft_send_char(int pid, char c)
+int	pid;
+
+void	ft_send_char(unsigned int str_index, char *c)
 {
 	int bit;
 
 	bit = 0;
 	while (bit <= 8)
 	{
-		if (c & 0b10000000 >> bit)
+		if (*c & 0b10000000 >> bit)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
 		bit++;
 		usleep(800);
 	}
+	(void)str_index;
 }
 
-void ft_send_message(int pid, char *str)
+void	ft_send_message(char *str)
 {
-	int bit;
-
-	bit = 0;
-	while (*str)
-	{
-		ft_send_char(pid, *str);
-		str++;
-	}
-	ft_send_char(pid, *str);
+	ft_striteri(str, ft_send_char);
 }
 
-int main(int argc, char ** argv)
+int	main(int argc, char ** argv)
 {
-	if (argc != 3 || ft_check_pid(argv[1]))
+	if (argc != 3 || ft_check_pid(argv[1], &pid))
 		exit(1);
-	if (ft_atoi(argv[1]) == 0)
-		exit(1);
-	ft_send_message(ft_atoi(argv[1]), argv[2]);
+	ft_send_message(argv[2]);
 }

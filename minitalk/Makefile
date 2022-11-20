@@ -4,7 +4,7 @@ CLIENT=client
 S_SRCS=server.c libput.c ft_strc.c
 S_OBJS=$(S_SRCS:.c=.o)
 
-C_SRCS=client.c libput.c libnum.c ft_atoi.c
+C_SRCS=client.c libput.c libnum.c ft_atoi.c ft_striteri.c
 C_OBJS=$(C_SRCS:.c=.o)
 
 HEADER=minitalk.h

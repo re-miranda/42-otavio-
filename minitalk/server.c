@@ -17,23 +17,17 @@ void ft_handler(int signal)
 {
 	static char	c = 0b11111111;
 	static int	bits = 0;
-	static char	*msg = 0;
 
-	if (signal == SIGUSR1)
-		c |= 0b10000000 >> bits;
-	else if (signal == SIGUSR2)
-		c ^= 0b10000000 >> bits;
+	if (signal == SIGUSR2)
+		c |= 0b00000001;
+	else if (signal == SIGUSR1)
+		c ^= 0b00000001;
 	if (++bits == 8)
 	{
-		if (c)
-			msg = ft_straddc(msg, c);
-		else
-		{
-			write(1, msg, ft_strlen(msg));
-		}
+		write(1, &c, 1);
 		bits = 0;
-		c = 0b11111111;
 	}
+	c <<= 1;
 }
 
 int main(void)

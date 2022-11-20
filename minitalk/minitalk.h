@@ -26,13 +26,16 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 
 // lib num
-int		ft_check_pid(char *arg);
+int		ft_check_pid(char *arg, int *pid);
 
 // atoi
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 // str c
 char	*ft_straddc(char *str, char c);
 size_t	ft_strlen(const char *s);
+
+// str iteri
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
